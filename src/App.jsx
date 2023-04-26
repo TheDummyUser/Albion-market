@@ -55,46 +55,52 @@ function App() {
     }
   };
   return (
-    <div className=''>
+    <div className='font-mono text-center'>
       <div className='md:flex md:place-content-center md:space-x-6 p-5'>
-        <div className='md:text-base text-4xl md:mt-5 mt-10'>Albion Market</div>
+        <div className='font-mono md:text-base text-3xl md:mt-5 mt-10'>Albion Market</div>
         <input
           type='text'
+	  placeholder="search"
           value={searchQuery}
           onChange={handleSearch}
-          className='p-5 rounded-full md:mt-0 mt-10 border border-black w-full h-10 md:w-60'
+          className='p-5 font-mono rounded-full md:mt-0 mt-10 border border-black w-full h-10 md:w-60'
         />
       </div>
   
       {searchResult && stats && stats.length > 0 && (
         <div>
-        <div className=''>
-        <div className='m-5 text-xl'>{searchResult.itemsName}</div>
-        <img className='flex place-centent-center'
+        <div className='flex'>
+        <img className='flex place-content-center'
             src={`https://render.albiononline.com/v1/item/${searchResult.itemId}.png`}
             alt={searchResult.itemsName}
+	      width={65} height={60}
           />
+<div className='m-5 text-xl'>{searchResult.itemsName}</div>
         </div>
           
   
           {stats.map((stat, index) => {
             return (
-              <div key={index} className='mb-10'>
+              <div classname="text-center font-mono">
+		    <div key={index} className='mb-10'>
                 <h2 className='text-xl underline mb-3 mt-3'>{stat.city}</h2>
                 <p>Minimum Sell Price: {stat.stats.sell_price_min}</p>
                 <p>Min Sell Price Last Updated: {moment(stat.stats.sell_price_min_date).format('MMMM Do YYYY, h:mm:ss a')}</p>
                 <p>Maximum Sell Price: {stat.stats.sell_price_max}</p>
                 <p>Max Sell Price Last Updated: {moment(stat.stats.sell_price_max_date).format('MMMM Do YYYY, h:mm:ss a')}</p>
               </div>
+		    </div>
             );
           })}
         </div>
       )}
   
       {(!searchResult || !stats || stats.length === 0) && (
-        <p>No results found.</p>
+        <p classname="text-center font-mono">
+	no data found.
+	</p>
       )}
-    <div className='fixed left-0 bottom-0 w-full bg-yellow-300 text-center'><p>content is taken from albion data project, updated every few hours</p></div>
+    <div className='fixed left-0 hidden bottom-0 w-full bg-yellow-300 text-center'><p>content is taken from albion data project, updated every few hours</p></div>
     </div>
   );
 }
