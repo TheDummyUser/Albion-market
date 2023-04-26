@@ -1,4 +1,4 @@
-## Documentation for Albion Market Search
+## Readme Documentation for Albion Market Search
 
 This is a simple React web application that searches the Albion Online Market and displays statistics on the queried item. The application uses data fetched from the Albion Online Data Project API, which provides real-time market data for Albion Online.
 
@@ -10,7 +10,7 @@ This is a simple React web application that searches the Albion Online Market an
 5. Open your browser and navigate to `http://localhost:5173/` to view the application.
 
 ### Usage
-1. Enter the name of the item you want to search for in the search bar.
+1. Enter the name of the item you want to search for in the search bar. You can also search for enchanted items using the "@" symbol followed by the enchantment level(s) you are interested in. For example, if you want to search for Adept's Dual Swords at enchantment levels 1, 2, 3, and 4, you would enter "Adept's Dual Sword@1 or 2 or 3 or 4".
 2. The application will display the item name, image, and market statistics for each city where the item is traded.
 3. If no results are found, a message will be displayed indicating that no results were found.
 
