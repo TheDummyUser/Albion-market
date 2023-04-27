@@ -55,53 +55,49 @@ function App() {
     }
   };
   return (
-    <div className='font-mono text-center'>
-      <div className='md:flex md:place-content-center md:space-x-6 p-5'>
-        <div className='font-mono md:text-base text-3xl md:mt-5 mt-10'>Albion Market</div>
-        <input
-          type='text'
-	  placeholder="search"
-          value={searchQuery}
-          onChange={handleSearch}
-          className='p-5 font-mono rounded-full md:mt-0 mt-10 border border-black w-full h-10 md:w-60'
-        />
-      </div>
-  
-      {searchResult && stats && stats.length > 0 && (
-        <div>
-        <div className='flex'>
-        <img className='flex place-content-center'
-            src={`https://render.albiononline.com/v1/item/${searchResult.itemId}.png`}
-            alt={searchResult.itemsName}
-	      width={65} height={60}
-          />
-<div className='m-5 text-xl'>{searchResult.itemsName}</div>
-        </div>
-          
-  
-          {stats.map((stat, index) => {
-            return (
-              <div classname="text-center font-mono">
-		    <div key={index} className='mb-10'>
-                <h2 className='text-xl underline mb-3 mt-3'>{stat.city}</h2>
-                <p>Minimum Sell Price: {stat.stats.sell_price_min}</p>
-                <p>Min Sell Price Last Updated: {moment(stat.stats.sell_price_min_date).format('MMMM Do YYYY, h:mm:ss a')}</p>
-                <p>Maximum Sell Price: {stat.stats.sell_price_max}</p>
-                <p>Max Sell Price Last Updated: {moment(stat.stats.sell_price_max_date).format('MMMM Do YYYY, h:mm:ss a')}</p>
-              </div>
-		    </div>
-            );
-          })}
-        </div>
-      )}
-  
-      {(!searchResult || !stats || stats.length === 0) && (
-        <p classname="text-center font-mono">
-	no data found.
-	</p>
-      )}
-    <div className='fixed left-0 hidden bottom-0 w-full bg-yellow-300 text-center'><p>content is taken from albion data project, updated every few hours</p></div>
-    </div>
+    <div class="font-mono text-center">
+	    
+	  <div class="flex flex-col justify-center items-center p-5">
+	      <div class="text-3xl md:text-base mt-10">Albion Market</div>
+	      <input
+	        type="text"
+	        placeholder="search"
+	        value={searchQuery}
+	        onChange={handleSearch}
+	        class="w-full md:w-60 h-10 mt-5 mb-3 px-3 rounded-full border border-black font-mono"
+	      />
+	      {searchResult && stats && stats.length > 0 ? (
+		            <div class="flex flex-col items-center">
+		              <div class="flex items-center">
+		                <img
+		                  src={`https://render.albiononline.com/v1/item/${searchResult.itemId}.png`}
+		                  alt={searchResult.itemsName}
+		                  width={65}
+		                  height={60}
+		                />
+		                <div class="text-xl ml-3">{searchResult.itemsName}</div>
+		              </div>
+
+		              {stats.map((stat, index) => (
+				                <div key={index} class="text-center font-mono">
+				                  <h2 class="text-xl underline mt-5">{stat.city}</h2>
+				                  <p>Minimum Sell Price: {stat.stats.sell_price_min}</p>
+				                  <p>Min Sell Price Last Updated: {moment(stat.stats.sell_price_min_date).format('MMMM Do YYYY, h:mm:ss a')}</p>
+				                  <p>Maximum Sell Price: {stat.stats.sell_price_max}</p>
+				                  <p>Max Sell Price Last Updated: {moment(stat.stats.sell_price_max_date).format('MMMM Do YYYY, h:mm:ss a')}</p>
+				                </div>
+				              ))}
+		            </div>
+		          ) : (
+				        <p class="font-mono mt-5">No data found.</p>
+				      )}
+
+	      <div class="fixed text-xs bottom-0 left-0 w-full bg-yellow-300 text-center p-2">
+	        <p>Content is taken from Albion Data Project, updated every few hours.</p>
+	      </div>
+	    </div>
+	  </div>
+
   );
 }
 
