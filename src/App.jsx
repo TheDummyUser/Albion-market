@@ -25,7 +25,7 @@ function App() {
           setSearchResult({ itemId, itemsName: results[0].itemsName });
 
           // Fetch the stats for the matching item
-          fetch(`https://www.albion-online-data.com/api/v2/stats/prices/${itemId}?locations=Caerleon,Bridgewatch,Thetford,FortSterling,Martlock,Lymhurst&qualities=0,1,2,3,4,5`)
+          fetch(`https://www.albion-online-data.com/api/v2/stats/prices/${itemId}?locations=Caerleon,Bridgewatch,Thetford,FortSterling,Martlock,Lymhurst&qualities=0,1,2,3,4,5&time-scale=24`)
             .then(response => response.json())
             .then(data => {
               const uniqueCities = [...new Set(data.map(stat => stat.city))];
