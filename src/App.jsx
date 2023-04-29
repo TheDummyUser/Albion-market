@@ -75,16 +75,16 @@ function App() {
 		                  width={65}
 		                  height={60}
 		                />
-		                <div class="text-xl ml-3">{searchResult.itemsName}</div>
+		                <div class="text-l ml-3">{searchResult.itemsName}</div>
 		              </div>
 
 		              {stats.map((stat, index) => (
 				                <div key={index} class="text-center font-mono">
 				                  <h2 class="text-xl underline mt-5">{stat.city}</h2>
-				                  <p>Minimum Sell Price: {stat.stats.sell_price_min}</p>
-				                  <p>Min Sell Price Last Updated: {moment(stat.stats.sell_price_min_date).format('MMMM Do YYYY, h:mm:ss a')}</p>
-				                  <p>Maximum Sell Price: {stat.stats.sell_price_max}</p>
-				                  <p>Max Sell Price Last Updated: {moment(stat.stats.sell_price_max_date).format('MMMM Do YYYY, h:mm:ss a')}</p>
+				                  <p classname="text-s">Minimum Sell Price: {stat.stats.sell_price_min}</p>
+				                  <p classname="text-s">Min Sell Price Last Updated: {moment(stat.stats.sell_price_min_date).format('MMMM Do YYYY, h:mm:ss a')}</p>
+				                  <p classname="text-s">Maximum Sell Price: {stat.stats.sell_price_max}</p>
+				                  <p classname="text-s">Max Sell Price Last Updated: {moment(stat.stats.sell_price_max_date).format('MMMM Do YYYY, h:mm:ss a')}</p>
 				                </div>
 				              ))}
 		            </div>
@@ -92,7 +92,7 @@ function App() {
 				        <p class="font-mono mt-5">No data found.</p>
 				      )}
 
-	      <div class="fixed text-xs bottom-0 left-0 w-full bg-yellow-300 text-center p-2">
+	      <div class="hidden fixed text-xs bottom-0 left-0 w-full bg-yellow-300 text-center p-2">
 	        <p>Content is taken from Albion Data Project, updated every few hours.</p>
 	      </div>
 	    </div>
