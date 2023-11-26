@@ -5,8 +5,8 @@ import TopApp from "../components/header";
 
 function Home() {
   const serverOptions = {
-    East: "east",
     West: "west",
+    East: "east",
   };
 
   const [selectedServer, setSelectedServer] = useState(serverOptions["West"]);
