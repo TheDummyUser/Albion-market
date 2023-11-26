@@ -88,7 +88,7 @@ function Home() {
 
   return (
     <div className="font-mono">
-      <TopApp />
+      {/*<TopApp />*/}
 
       <div className="flex flex-col p-5">
         <div className="flex items-center justify-center space-x-6 mt-10">
