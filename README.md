@@ -1,22 +1,49 @@
-## Readme Documentation for Albion Market Search
+# Albion Market React Component
 
-This is a simple React web application that searches the Albion Online Market and displays statistics on the queried item. The application uses data fetched from the Albion Online Data Project API, which provides real-time market data for Albion Online.
+## Overview
+The Albion Market React Component is a web application component designed to display market statistics for items in the game Albion Online. It allows users to search for items, select a server region, and view the minimum and maximum sell prices for the selected item across different cities within the chosen server region.
 
-### Getting Started
-1. Clone the repository to your local machine.
-2. Open a terminal and navigate to the root directory of the project.
-3. Run `npm install` to install the required dependencies.
-4. Run `npm start` to start the development server.
-5. Open your browser and navigate to `http://localhost:5173/` to view the application.
+## Features
+- **Search Functionality**: Users can search for items by typing their names into the search bar. As the user types, the component dynamically updates the search results based on the input.
+- **Server Selection**: Users can choose between two server regions: West and East, using a dropdown menu.
+- **Display Item Information**: Once an item is selected, the component displays its image, name, and market statistics for each city where the item is sold.
+- **Data Fetching**: Market statistics are fetched from the Albion Online API. The component retrieves information such as minimum and maximum sell prices for the selected item in various cities within the chosen server region.
+- **Data Update**: The component refreshes market data every hour to ensure accuracy.
+- **Instructions**: Provides instructions for users on how to search for items and interpret the displayed data.
+- **No Data Found Handling**: If no data is found for the searched item, a message is displayed informing the user.
 
-### Usage
-1. Enter the name of the item you want to search for in the search bar. You can also search for enchanted items using the "@" symbol followed by the enchantment level(s) you are interested in. For example, if you want to search for Adept's Dual Swords at enchantment levels 1, 2, 3, and 4, you would enter "Adept's Dual Sword@1 or 2 or 3 or 4".
-2. The application will display the item name, image, and market statistics for each city where the item is traded.
-3. If no results are found, a message will be displayed indicating that no results were found.
+## Technologies Used
+- **React**: JavaScript library for building user interfaces.
+- **useState**: React hook for managing state within functional components.
+- **useEffect**: React hook for performing side effects in functional components.
+- **Fetch API**: Used to make HTTP requests to retrieve market data from the Albion Online API.
+- **Moment.js**: Library for parsing, validating, manipulating, and displaying dates and times. Used for formatting timestamps in the displayed data.
 
-### Dependencies
-- React
-- moment
+## Installation
+1. Clone the repository: `git clone https://github.com/yourusername/albion-market-react.git`
+2. Navigate to the project directory: `cd albion-market-react`
+3. Install dependencies: `npm install`
 
-### Acknowledgments
-This application was created using the Albion Online Data Project API, which provides real-time market data for Albion Online. The application is meant to serve as a simple example of how to use the API to create a web application that interacts with the Albion Online market.
+## Usage
+1. Start the development server: `npm start`
+2. Open your browser and navigate to `http://localhost:3000` to view the application.
+
+## Contributing
+Contributions are welcome! Here are a few ways you can contribute:
+- **Bug Fixes**: Find and fix bugs.
+- **Enhancements**: Add new features or improve existing ones.
+- **Documentation**: Improve the project documentation.
+- **Testing**: Write tests to ensure code reliability.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+- **Albion Online**: The Albion Market React Component relies on the Albion Online API for fetching market data.
+- **Open Source Community**: Thanks to all the contributors and maintainers of the open-source libraries used in this project.
+
+## Contact
+For any inquiries or support, please contact [Your Name](mailto:youremail@example.com).
+
+---
+**Note**: Update placeholders (like `yourusername`, `Your Name`, `youremail@example.com`) with actual information specific to your project.
