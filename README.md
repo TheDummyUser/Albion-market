@@ -35,15 +35,8 @@ Contributions are welcome! Here are a few ways you can contribute:
 - **Documentation**: Improve the project documentation.
 - **Testing**: Write tests to ensure code reliability.
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgements
 - **Albion Online**: The Albion Market React Component relies on the Albion Online API for fetching market data.
 - **Open Source Community**: Thanks to all the contributors and maintainers of the open-source libraries used in this project.
 
-## Contact
-For any inquiries or support, please contact [Your Name](mailto:youremail@example.com).
 
----
-**Note**: Update placeholders (like `yourusername`, `Your Name`, `youremail@example.com`) with actual information specific to your project.
