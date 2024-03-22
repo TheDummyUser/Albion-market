@@ -20,8 +20,8 @@ The Albion Market React Component is a web application component designed to dis
 - **Moment.js**: Library for parsing, validating, manipulating, and displaying dates and times. Used for formatting timestamps in the displayed data.
 
 ## Installation
-1. Clone the repository: `git clone https://github.com/yourusername/albion-market-react.git`
-2. Navigate to the project directory: `cd albion-market-react`
+1. Clone the repository: `git clone https://github.com/ThedummyUser/Albion-market.git`
+2. Navigate to the project directory: `cd Albion-market`
 3. Install dependencies: `npm install`
 
 ## Usage
