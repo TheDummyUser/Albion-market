@@ -41,9 +41,9 @@ const App = () => {
   const searchItem = data.items.filter((item: { Id: string; itemId: string; itemsName: string; }) =>
     item.itemsName.toLowerCase().includes(searchDebounced.toLowerCase())
   )
-  
-  const itemName = searchItem[0]?.itemsName
-  const itemId = searchItem[0]?.itemId
+
+  const itemName = searchDebounced.trim().length >= 0 ? searchItem[0]?.itemsName : ""
+  const itemId = searchDebounced.trim().length >= 0 ? searchItem[0]?.itemId : ""
 
   useEffect(() => {
     const fetchStats = async (itemId: string) => {
@@ -80,6 +80,8 @@ const App = () => {
       setResults([])
     }
   }, [itemId, selectedServer])
+
+  console.log(itemId, itemName)
 
   return (
     <>
